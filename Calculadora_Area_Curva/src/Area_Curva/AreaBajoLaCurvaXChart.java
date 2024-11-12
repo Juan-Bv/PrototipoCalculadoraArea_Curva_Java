@@ -48,25 +48,20 @@ public class AreaBajoLaCurvaXChart {
             yArea.add(evaluarFuncion(funcion, x));
         }
 
-        // Añadir puntos adicionales para cerrar el área sombreada
         xArea.add(b);
         yArea.add(0.0);
         xArea.add(a);
         yArea.add(0.0);
 
-        // Crear el gráfico
         XYChart chart = new XYChartBuilder().width(800).height(600).title("Area Bajo la Curva").xAxisTitle("X").yAxisTitle("Y").build();
 
-        // Añadir la serie de la curva de la función
         XYSeries seriesFuncion = chart.addSeries("f(x)", xData, yData);
         seriesFuncion.setLineColor(java.awt.Color.BLUE);
 
-        // Añadir la serie para el área bajo la curva
         XYSeries seriesArea = chart.addSeries("Area bajo la curva", xArea, yArea);
         seriesArea.setLineColor(java.awt.Color.CYAN);
         seriesArea.setFillColor(new java.awt.Color(0, 128, 255, 100)); // Color semitransparente para el área
 
-        // Mostrar el gráfico en una ventana
         new SwingWrapper<>(chart).displayChart();
     }
 
@@ -86,7 +81,7 @@ public class AreaBajoLaCurvaXChart {
         System.out.print("Ingresa el limite superior (b): ");
         double b = scanner.nextDouble();
 
-        int n = 1000; // Número de intervalos para el cálculo
+        int n = 1000; 
         double area = calcularArea(funcion, a, b, n);
 
         System.out.println("El area bajo la curva es: " + area);

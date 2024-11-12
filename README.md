@@ -26,7 +26,7 @@ Este proyecto es un prototipo de una calculadora de área bajo la curva que calc
 
 1. Clona el repositorio y asegúrate de tener las bibliotecas `exp4j` y `XChart` incluidas en tu proyecto.
 2. Ejecuta el programa.
-3. Ingresa la función en términos de \( x \) (por ejemplo: `x^2 + 3*x - 5`).
+3. Ingresa la función en términos de \( x \) (por ejemplo: `x^2 + 3x - 5`).
 4. Especifica el límite inferior y superior para calcular el área entre estos puntos.
 5. El programa imprimirá el área y abrirá una ventana con la gráfica de la función y el área sombreada.
 
